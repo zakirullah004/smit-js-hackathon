@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Dashboard — Add Post & Edit Profile (HTML + CSS)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mainpage.css">
+</head>
+
+<body>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">user name</label>
+                        <input type="text" class="form-control" id="changeuserName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">profile image url</label>
+                        <input type="text" class="form-control" id="changeuserImage"></input>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="edituserData()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">UD</div>
+                <div>
+                    <!-- <div class="title"></div> -->
+                    <div class="sub">Welcome back — your space to post & update profile</div>
+                </div>
+            </div>
+
+            <nav>
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">My Posts</button>
+                <button class="nav-btn">Settings</button>
+                <button class="nav-btn primary">Logout</button>
+            </nav>
+        </header>
+
+        <main class="grid">
+            <!-- LEFT: Profile + stats -->
+            <aside>
+                <div class="card">
+                    <div class="profile">
+                        <img src="https://img.freepik.com/premium-vector/vector-flat-illustration-grayscale-avatar-user-profile-person-icon-gender-neutral-silhouette-profile-picture-suitable-social-media-profiles-icons-screensavers-as-templatex9xa_719432-2210.jpg?semt=ais_hybrid&w=740&q=80"
+                            class="avatar" id="userImageUrl"></img>
+                        <div>
+                            <h3 id="user-name">Zakir Ullah</h3>
+                            <p id="user-email">zakir@example.com</p>
+                            <div class="edit-profile">
+                                <button type="button" class="btn bg-primary text-white" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal" id="open-edit-profile">Edit Profile</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="height:12px"></div>
+
+            </aside>
+
+            <!-- RIGHT: Compose + Posts -->
+            <section>
+                <div class="compose">
+                    <div class="card">
+                        <label for="post-text"><strong>Create a new post</strong></label>
+                        <textarea id="uploadpostTitle" placeholder="What's on your mind?"></textarea>
+                        <div class="row" style="margin-top:8px">
+                            <div class="actions">
+                                <input class="btn" type="text" id="uploadpostImg" placeholder="image Url">
+                                <button onclick="uploadPost()" class="btn primary" id="publish">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+    <div id="allPosts">
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="mainpage.js"></script>
+    <!-- NOTE: This file is HTML + CSS only. JavaScript hooks (IDs) are present for later wiring. -->
+</body>
+
+</html>

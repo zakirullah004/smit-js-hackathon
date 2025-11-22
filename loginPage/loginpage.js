@@ -38,7 +38,7 @@ function loginuserHandler(){
             localStorage.setItem("currentUser",JSON.stringify(checkforcurrentUser))
             alert("Login hogaya")
 
-            location.href = "./mianpage.html"
+            location.href = "../mainfeedPage/mianpage.html"
 
             console.log(checkforcurrentUser);
 

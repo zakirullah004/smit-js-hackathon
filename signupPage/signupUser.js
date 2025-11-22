@@ -10,11 +10,12 @@ function signupUserHandler() {
 
     if (signupPassword.value.trim().length < 8) {
         alert("password length should be atleast 8")
+        return
     }
 
     if (!signupEmail.value || !signupName.value || !signupPassword.value) {
         alert("please fill all the feilds")
-
+        return
     }
 
 
@@ -40,6 +41,6 @@ function signupUserHandler() {
 
     alert("Signup Successfully")
 
-    location.href = "./loginpage.html"
+    location.href = "../loginPage/loginpage.html"
 
 }

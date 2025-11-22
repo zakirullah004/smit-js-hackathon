@@ -3,7 +3,8 @@
     /* border: 2px solid red; */
     margin: 0 auto;
     background-color: beige;
-    padding: 40px;
+    padding: 20px 40px;
+    margin-top: 0.5rem;
 }
 #main-container > .header{
     text-align: center;

@@ -5,9 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="signupLoginpage.css">
 </head>
 <body>
+
+        <nav>
+        <input type="checkbox" id="toggleMenu">
+        <label for="toggleMenu">
+            <i id="OpennavMenu" class="fa-solid fa-bars"></i>
+        </label>
+        <label id="overlay" for="toggleMenu"></label>
+
+        <ul class="navList">
+
+            <label for="toggleMenu">
+                <i id="closenavMenu" class="fa-solid fa-x"></i>
+            </label>
+
+            <a href="#" class="active">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Services</li>
+            </a>
+            <a href="#">
+                <li>Contact us</li>
+            </a>
+
+        </ul>
+
+    </nav>
 
     <div id="main-container">
         <h1 class="header">Join for success ✨</h1>
@@ -29,7 +60,7 @@
             </div>
             <button type="submit" class="b-2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRltYFb883WrThnsdFJtQa2pi2_9HTcd9USDw&s" alt=""> Sign up with Google</button>
 
-            <p class="center">Already have an acoount? <a href="login.html">Log in</a> </p>
+            <p class="center">Already have an acoount? <a href="../loginPage/loginpage.html">Log in</a> </p>
     </div>
 
 

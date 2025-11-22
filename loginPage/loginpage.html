@@ -5,13 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="signupLoginpage.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../signupPage/signupLoginpage.css">
 </head>
 <body>
 
+        <nav>
+        <input type="checkbox" id="toggleMenu">
+        <label for="toggleMenu">
+            <i id="OpennavMenu" class="fa-solid fa-bars"></i>
+        </label>
+        <label id="overlay" for="toggleMenu"></label>
+
+        <ul class="navList">
+
+            <label for="toggleMenu">
+                <i id="closenavMenu" class="fa-solid fa-x"></i>
+            </label>
+
+            <a href="#" class="active">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Services</li>
+            </a>
+            <a href="#">
+                <li>Contact us</li>
+            </a>
+
+        </ul>
+
+    </nav>
+
     <div id="main-container">
         <h1 class="header">Welcome back 👋</h1>
-        <p class="center">Welcome back! let's make this chapter of your learning adventure a remarkable success! Happy learning!</p>
 
             <label for="emial">Email</label>
             <input id="loginEmail" type="email" id="email" placeholder="enter your email">
@@ -26,8 +56,9 @@
             </div>
             <button type="submit" class="b-2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRltYFb883WrThnsdFJtQa2pi2_9HTcd9USDw&s" alt=""> Login up with Google</button>
 
-            <p class="center">Don't have an acoount? <a href="index.html">Sign up for free</a> </p>
+            <p class="center">Don't have an acoount? <a href="../signupPage/signuppage.html">Sign up for free</a> </p>
     </div>
+
 
 
     <script src="loginpage.js"></script>    

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-family: Popins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* My custom navbar starts */
+nav {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.navList {
+    display: flex;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.navList a {
+    height: 100%;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.navList>a:hover {
+    background-color: #006aff;
+}
+
+.navList>.active {
+    margin-right: auto;
+}
+
+nav>input {
+    display: none;
+}
+
+#OpennavMenu,
+#closenavMenu {
+    display: none;
+    color: white;
+}
+
+@media screen and (max-width:460px) {
+    .navList {
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        background-color: black;
+        z-index: 100;
+        justify-content: flex-start;
+        transition:  .75s ease-out;
+
+
+    }
+
+    .navList a {
+        padding: 20px 30px;
+        height: auto;
+        width: 100%;
+        align-items: center;
+    }
+
+    #OpennavMenu,
+    #closenavMenu {
+        display: block;
+        padding: 20px;
+        font-size: 20px;
+    }
+
+    #toggleMenu:checked~.navList {
+        right: 0px;
+    }
+    #toggleMenu:checked ~ #overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index:9;
+    }
+}
+
+
+/* My custom navbar ends */
