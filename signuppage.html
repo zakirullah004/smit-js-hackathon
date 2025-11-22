@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signupLoginpage.css">
+</head>
+<body>
+
+    <div id="main-container">
+        <h1 class="header">Join for success ✨</h1>
+        <p class="center">Are you ready to take the next step towards a successful future? Look no further than Circlez!</p>
+
+            <label for="name">Full name</label>
+            <input id="signupName" type="text" id="name" placeholder="enter your name">
+
+            <label for="emial">Email</label>
+            <input id="signupEmail" required type="email" id="email" placeholder="enter your email">
+            
+            <label for="password">Password</label>
+            <input id="signupPassword" required type="password" id="password" placeholder="enter your password">
+
+            <button onclick="signupUserHandler()" class="b-1" >Sign up</button>
+            
+            <div class="divider">
+                <span class="or">OR</span>
+            </div>
+            <button type="submit" class="b-2"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRltYFb883WrThnsdFJtQa2pi2_9HTcd9USDw&s" alt=""> Sign up with Google</button>
+
+            <p class="center">Already have an acoount? <a href="login.html">Log in</a> </p>
+    </div>
+
+
+    <script src="signupUser.js"></script>
+
+</body>
+</html>
