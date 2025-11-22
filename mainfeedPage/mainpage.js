@@ -52,7 +52,7 @@ function uploadPost() {
     let post = `
  <div class="mycard">
             <div class="mycard-title">${uploadpostTitle.value}</div>
-            <div class="mycard-time">Posted 2 hours ago</div>
+            <div class="mycard-time">Posted at ${Date.now().toString()} by ${getcurrentUser.userName}</div>
 
             <img class="mycard-img" src="${uploadpostImg.value}" />
 
@@ -63,22 +63,44 @@ function uploadPost() {
             </div>
         </div>
 `
-let div = document.createElement("div")
-div.innerHTML = post
+    let div = document.createElement("div")
+    div.innerHTML = post
 
-allPosts.prepend(div) 
-
-    
-localStorage.setItem("allPosts",JSON.stringify(allPosts.innerHTML))
-
-loadAllPosts()
-
-}  
+    allPosts.prepend(div)
 
 
-function loadAllPosts(){
+    localStorage.setItem("allPosts", JSON.stringify(allPosts.innerHTML))
+
+    loadAllPosts()
+
+}
+
+
+function logoutUser() {
+    location.href = "../loginPage/loginpage.html"
+}
+
+
+function loadAllPosts() {
     let getPost = JSON.parse(localStorage.getItem("allPosts"))
     console.log(getPost);
     allPosts.innerHTML = getPost
 }
 loadAllPosts()
+
+// arr.map(elem => {
+//     let counter = 0;
+
+//     arr.map(item => {
+//         data.map(ite)
+//         item == elem && counter++;
+//     })
+//     data.push(
+//         {
+//             name: elem,
+//             number: counter
+//         }
+//     )
+// })
+
+// console.log("result ==>", data);
